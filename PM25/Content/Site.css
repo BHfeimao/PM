@@ -44,8 +44,11 @@ body {
 }
 
 .header .navigation-bar li {
-    padding: 0 20px;
+    margin: 0 20px;
     float: left;
+}
+.header .navigation-bar li:hover{
+    background-color:green;
 }
 .render-body {
     margin : 10px 10%;
