@@ -15,8 +15,7 @@ namespace PM25.Controllers
 
         public ActionResult BodyTem()
         {
-            ViewBag.Message = "Your application description page.";
-
+            
             return View();
         }
 
