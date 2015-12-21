@@ -47,7 +47,11 @@ body {
     padding: 0 20px;
     float: left;
 }
-.footer{
+.render-body {
+    margin : 10px 10%;
+    overflow : hidden ;
+}
+.footer{    
     overflow: hidden;
     background: #f7f7f7;
     margin: 0 10%;
