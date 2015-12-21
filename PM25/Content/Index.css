@@ -1,0 +1,51 @@
+﻿.home-body-left {
+    float: left;
+    width: 30%;
+    height: 500px;
+    border: 1px solid #cbcaca;
+    background-color: #f7f7f7;
+}
+.home-body-left h1 {
+    margin: 0 10%;
+}
+.home-body-left h1 span.lefts{
+    font-size:10px;
+    padding-top: 10px;
+    padding-left: 10%;
+}
+.home-body-left h1 span.rights{
+    font-size:12%;
+    float: right; 
+    padding-top: 10px;
+    padding-left: 10%;
+}
+
+.home-body-right {
+    width: 68%;
+    height: 500px;
+    float: right;
+    
+    overflow: hidden;
+    border: 1px solid #cbcaca;
+    background-color:  #f7f7f7;
+}
+.left-con {
+    margin: 0 10% 10%  ;
+    height: 400px;
+    overflow: hidden;
+    float: left;
+    border: 1px solid #cbcaca ;
+
+}
+.left-con ul{
+    padding-top: 30px;
+    padding-left: 10px;
+    list-style: none;
+}
+.left-con ul li {
+    height: 23px;
+    line-height: 23px;
+    font-size: 10px;
+    background: url('img/list-image.png')8px center no-repeat;
+    padding-left: 25px;
+}
