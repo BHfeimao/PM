@@ -54,6 +54,7 @@ body {
     border: 1px solid #d1d1d1;
     padding:10px 20px;
     text-indent: 25px;
+    clear:both;
 }
 .footer h2{
     font-size: 18px;
