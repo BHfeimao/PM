@@ -1,0 +1,5 @@
+*.config
+.vs/PM25/v14/.suo
+PM25/obj/Debug/PM25.csproj.FileListAbsolute.txt
+PM25/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+PM25/obj/Debug/PM25.csprojResolveAssemblyReference.cache
