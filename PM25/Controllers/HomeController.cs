@@ -15,7 +15,6 @@ namespace PM25.Controllers
 
         public ActionResult BodyTem()
         {
-            
             return View();
         }
 
