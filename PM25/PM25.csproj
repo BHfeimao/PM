@@ -208,7 +208,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Css\Detail.css" />
     <Content Include="Content\Img\back.jpg" />
+    <Content Include="Content\Img\Detail.jpg" />
     <Content Include="Content\Img\list-image.png" />
     <Content Include="Content\Img\logo.jpg" />
     <Content Include="Content\Img\logo_2.gif" />
@@ -236,6 +238,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Views\Other\Detail.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
