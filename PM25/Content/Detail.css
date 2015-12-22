@@ -1,47 +1,46 @@
-<<<<<<< HEAD:PM25/Content/Detail.css
-/*.body-main {
-   
-   
-}
 .home-body-left {
-=======
-/*.home-body-left {
->>>>>>> origin/master:PM25/Content/Detail.css
     float: left;
     width: 30%;
     height:500px;
     border: 1px solid #cbcaca;
     background-color: #f7f7f7;
 }
+
 .home-body-left h1 {
     margin: 5% 10%;
 }
+
 .home-body-left h1 span.lefts{
     font-size:22px;
     padding-bottom: 3px;
 }
+
 .home-body-left h1 span.rights{
     font-size:12%;
     padding-left: 45%;
 }
+
 .left-con {
     margin: 0 10% 10%    ;
     height: 400px;
     overflow: hidden;
     border: 1px solid #cbcaca ;
 }
+
 .left-con ul{
     padding-top: 30px;
     padding-left: 5px;
     list-style: none;
 }
+
 .left-con ul li {
     height: 23px;
     line-height: 23px;
     font-size: 10px;
-    background: url('../images/list-image.png')8px center no-repeat;
+    background: url('img/list-image.png')8px center no-repeat;
     padding-left: 33px;
-}*/
+}
+
 .home-body-right {
     width: 68%;
     height: 500px;
@@ -53,12 +52,14 @@
 }
 
 .home-body-right .rights-con {
+    padding-top:5%;
     padding-left: 5%;
+    padding-right:5%;
 }
-.home-body-right .rights-con .detail-introduce {
-    width:80% ;
-}
+
+
 .home-body-right .rights-con p {
+    line-height:30px;
     text-indent:32px;
 }
 .home-body-right .rights-con img {
