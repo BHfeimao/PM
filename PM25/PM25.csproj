@@ -208,11 +208,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="Content\Summary.css" />
-=======
-    <Content Include="Content\Css\Detail.css" />
->>>>>>> origin/master
+    <Content Include="Content\Detail.css" />
     <Content Include="Content\Img\back.jpg" />
     <Content Include="Content\Img\Detail.jpg" />
     <Content Include="Content\Img\list-image.png" />
