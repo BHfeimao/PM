@@ -1,8 +1,4 @@
-.body-main {
-   
-   
-}
-.home-body-left {
+/*.home-body-left {
     float: left;
     width: 30%;
     height:500px;
@@ -37,7 +33,7 @@
     font-size: 10px;
     background: url('../images/list-image.png')8px center no-repeat;
     padding-left: 33px;
-}
+}*/
 .home-body-right {
     width: 68%;
     height: 500px;

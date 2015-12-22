@@ -208,13 +208,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Css\Detail.css" />
+    <Content Include="Content\Detail.css" />
     <Content Include="Content\Img\back.jpg" />
     <Content Include="Content\Img\Detail.jpg" />
     <Content Include="Content\Img\list-image.png" />
     <Content Include="Content\Img\logo.jpg" />
     <Content Include="Content\Img\logo_2.gif" />
     <Content Include="Content\Index.css" />
+    <Content Include="Content\Summary.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
