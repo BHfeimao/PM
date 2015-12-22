@@ -13,9 +13,9 @@ namespace PM25.Controllers
             return View();
         }
 
-        public ActionResult BodyTem()
+        public ActionResult Bodytem()
         {
-            return View();
+            return View("Summary");
         }
 
         public ActionResult Contact()
