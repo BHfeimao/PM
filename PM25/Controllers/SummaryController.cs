@@ -11,7 +11,7 @@ namespace PM25.Controllers
         // GET: Summary
         public ActionResult Detail()
         {
-            return View("../Other/Detail");
+            return View("Detail");
         }
     }
 }
