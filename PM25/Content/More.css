@@ -1,0 +1,20 @@
+.wraper {
+    /*margin: 10% 10%;*/
+    width: 100%;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    float: left;
+}
+ul {
+    list-style: none;
+    padding-top: 25px;
+
+}
+.wraper  ul li {
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    padding-left: 30px;
+    white-space: nowrap;
+    background: url('Img/list-image.png') 7px center no-repeat;
+}
