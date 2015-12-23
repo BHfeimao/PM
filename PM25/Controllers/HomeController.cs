@@ -13,6 +13,11 @@ namespace PM25.Controllers
             return View();
         }
 
+        public ActionResult More_info()
+        {
+            return View("More");
+        }
+
         public ActionResult Bodytem()
         {
             return View("Summary");
