@@ -219,10 +219,6 @@
     <Content Include="Content\Index.css" />
 
     <Content Include="Content\More.css" />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
     <Content Include="Content\Now.css" />
     <Content Include="Content\Show.css" />
 
