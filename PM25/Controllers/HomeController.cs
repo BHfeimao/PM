@@ -23,6 +23,11 @@ namespace PM25.Controllers
             return View("Summary");
         }
 
+        public ActionResult Now()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

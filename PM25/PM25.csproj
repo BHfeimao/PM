@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoreController.cs" />
     <Compile Include="Controllers\SummaryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -216,7 +217,12 @@
     <Content Include="Content\Img\logo.jpg" />
     <Content Include="Content\Img\logo_2.gif" />
     <Content Include="Content\Index.css" />
+<<<<<<< HEAD
     <Content Include="Content\More.css" />
+=======
+    <Content Include="Content\Now.css" />
+    <Content Include="Content\Show.css" />
+>>>>>>> origin/master
     <Content Include="Content\Summary.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -241,6 +247,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\More\Show.cshtml" />
+    <Content Include="Views\Home\Now.cshtml" />
     <None Include="Views\Summary\Detail.cshtml" />
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />
