@@ -217,12 +217,11 @@
     <Content Include="Content\Img\logo.jpg" />
     <Content Include="Content\Img\logo_2.gif" />
     <Content Include="Content\Index.css" />
-<<<<<<< HEAD
+
     <Content Include="Content\More.css" />
-=======
     <Content Include="Content\Now.css" />
     <Content Include="Content\Show.css" />
->>>>>>> origin/master
+
     <Content Include="Content\Summary.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
