@@ -1,0 +1,100 @@
+﻿.cyclopedia{
+    overflow: hidden;
+}
+
+.baidu-knowledge{
+    margin-top: 10px;
+    margin-left: 0.5%;
+    width: 25%;
+    height: 460px;
+    padding: 10px 30px 30px 30px;
+    background-color: rgba(203, 202, 202, 0.13);
+    float: left;
+    border: 1px solid #cbcaca;
+}
+
+.knowledge{
+    margin: 0;
+    padding: 20px 10px;
+    border: 1px solid #cbcaca;
+    list-style-type: none;
+    height: 340px;
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+span{
+    float: right;
+    padding-right: 8px;
+    font-size: 20px;
+    color: #494a4a;
+    font-family: serif;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+span:hover{
+    color: bisque;
+}
+
+ul.knowledge li{
+    background: url(../IMG/current-issues/xiaosanjiao.jpg) no-repeat 8px;
+    font-size: 15px;
+    color: #494a4a;
+    padding-left: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+ul.knowledge li:hover{
+    color: #1a87ff;
+}
+
+.text-introduction{
+    margin-top: 10px;
+    margin-right: 0.5%;
+    float: right;
+    width: 68%;
+    height: 500px;
+    border: 1px solid #cbcaca;
+    background-color: rgba(203, 202, 202, 0.13);
+    overflow-y: scroll;
+}
+
+.text,.list-text{
+    list-style-type: none;
+    overflow: hidden;
+}
+h4{
+    background: url(../IMG/current-issues/zhengsanjiao.png) no-repeat 8px;
+    background-size: 20px;
+    padding-left: 40px;
+    overflow: hidden;
+    margin-bottom: 0;
+    cursor: pointer;
+    float: left;
+}
+
+h4:hover{
+    color: #1a87ff;
+}
+
+.btn{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #cccccc;
+}
+
+p{
+    float: left;
+    text-indent: 2em;
+    margin-bottom: 0px;
+    line-height: 1.8;
+}

@@ -1,0 +1,31 @@
+﻿.map-text-play{
+    border: 1px solid #d1d1d1;
+    background: rgba(247, 247, 247, 0.47);
+    padding: 10px 20px;
+    text-indent: 2em;
+}
+
+header{
+    font: normal 24px Arial, Helvetica, sans-serif;
+    color: #606060;
+    padding: 15px 0;
+}
+
+.map-text{
+    font: normal 11px Arial, Helvetica, sans-serif;
+    color: #9c9c9c;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+p{
+    font: normal 16px Arial, Helvetica, sans-serif;
+    color: #606060;
+    line-height: 1.5em;
+}
+
+img{
+    height: 400px;
+    display: block;
+    margin: 20px auto;
+}
