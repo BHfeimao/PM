@@ -23,7 +23,7 @@
     border: 1px solid #cbcaca ;
 }
 .left-con ul{
-    padding-top: 30px;
+    padding-top: 10px;
     padding-left: 5px;
     list-style: none;
 }
@@ -43,6 +43,12 @@
     background-color:  #f7f7f7;
 }
 .home-body-right .rights-con {
-    padding-top: 18%;
+    padding-top: 5%;
     padding-left: 10%;
+}
+.rights-con {
+    line-height:2;
+    letter-spacing: 1px;
+    font-size:17px;
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
