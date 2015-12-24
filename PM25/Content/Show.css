@@ -1,34 +1,38 @@
 ﻿.map-text-play{
     border: 1px solid #d1d1d1;
-    background: rgba(247, 247, 247, 0.47);
+    
     padding: 10px 20px;
     text-indent: 2em;
     background-color:#f7f7f7;
     padding: 3% 5% 0;
-    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     letter-spacing: 1px;
     padding-bottom: 20px;
 }
 
 .map-text-play header{
-    font: normal 24px Arial, Helvetica, sans-serif;
-    color: #606060;
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    color: black;
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .map-text{
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     list-style-type: none;
+    font-weight:normal ;
 }
 
 .map-text li h4{
-    font: normal 11px Arial, Helvetica, sans-serif;
-    color: #9c9c9c;
-    font-size: 16px;
+    font-weight:normal ;
+    color: black;
+    font-size: 20px;
     margin: 10px 0;
 }
 
 .map-text li p{
-    font: normal 16px Arial, Helvetica, sans-serif;
-    color: #606060;
+   
+    padding-bottom:10px;
     line-height: 1.7em;
 }
 
