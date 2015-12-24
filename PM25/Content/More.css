@@ -10,11 +10,15 @@ ul {
     padding-top: 25px;
 
 }
-.wraper  ul li {
+.wraper ul li {
     height: 35px;
     line-height: 35px;
     font-size: 20px;
     padding-left: 30px;
     white-space: nowrap;
     background: url('Img/list-image.png') 7px center no-repeat;
+    cursor:pointer;
+}
+.wraper ul li:hover,.wraper ul li a:hover{
+    color: #1a87ff;
 }
