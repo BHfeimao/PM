@@ -46,7 +46,7 @@
     line-height: 30px;
     font-size: 12px;
     background: url('img/list-image.png')8px center no-repeat;
-    padding-left: 33px;
+    padding: 1px 10px 0px 30px;
     font-family: -webkit-pictograph;
     cursor:pointer;
 }
