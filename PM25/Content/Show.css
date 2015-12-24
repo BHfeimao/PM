@@ -3,29 +3,39 @@
     background: rgba(247, 247, 247, 0.47);
     padding: 10px 20px;
     text-indent: 2em;
+    background-color:#f7f7f7;
 }
 
-header{
+.map-text-play header{
     font: normal 24px Arial, Helvetica, sans-serif;
     color: #606060;
-    padding: 15px 0;
 }
 
 .map-text{
-    font: normal 11px Arial, Helvetica, sans-serif;
-    color: #9c9c9c;
-    font-size: 16px;
     list-style-type: none;
 }
 
-p{
-    font: normal 16px Arial, Helvetica, sans-serif;
-    color: #606060;
-    line-height: 1.5em;
+.map-text li h4{
+    font: normal 11px Arial, Helvetica, sans-serif;
+    color: #9c9c9c;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-img{
+.map-text li p{
+    font: normal 16px Arial, Helvetica, sans-serif;
+    color: #606060;
+    line-height: 1.7em;
+}
+
+.map-text li .wumai{
     height: 400px;
+    float: right;
+    margin: 20px 10px 0 20px;
+}
+
+.map-text li .heiyun{
+    height: 300px;
     display: block;
     margin: 20px auto;
 }
