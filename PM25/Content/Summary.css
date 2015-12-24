@@ -46,6 +46,8 @@
     height: 500px;
     border: 1px solid #cdcaca;
     background-color: #f7f7f7;
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    letter-spacing: 1px;
 }
 .con-R ul{
     margin:20px 10px;
@@ -83,6 +85,7 @@
     overflow:hidden;
     padding:10px 20px;
     line-height:23px;
+    text-indent: 2em;
 }
 .con-R li p a{
     text-decoration:none;
