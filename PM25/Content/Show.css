@@ -1,20 +1,14 @@
 ﻿.map-text-play{
     border: 1px solid #d1d1d1;
     background: rgba(247, 247, 247, 0.47);
+    padding: 10px 20px;
     text-indent: 2em;
     background-color:#f7f7f7;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-    letter-spacing: 1px;
-    padding-bottom: 20px;
 }
 
 .map-text-play header{
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom:20px;
+    font: normal 24px Arial, Helvetica, sans-serif;
+    color: #606060;
 }
 
 .map-text{
@@ -22,16 +16,16 @@
 }
 
 .map-text li h4{
-    font-size:20px;
-    font-weight:normal ;
-    color:black;
-   padding-bottom:10px;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    color: #9c9c9c;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .map-text li p{
+    font: normal 16px Arial, Helvetica, sans-serif;
     color: #606060;
     line-height: 1.7em;
-    padding-bottom :20px;
 }
 
 .map-text li .wumai{
