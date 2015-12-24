@@ -24,6 +24,7 @@
     font-size:10px;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 40%;
+    cursor:pointer;
 }
 
 .baidu-knowledge h3 .rights:hover{
@@ -32,7 +33,7 @@
 
 .knowledge{
     margin: 0 10% 10%    ;
-    height: 400px;
+    height: 380px;
     overflow: hidden;
     border: 1px solid #cbcaca ;
     padding-top: 30px;
