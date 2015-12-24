@@ -4,6 +4,13 @@
     padding: 10px 20px;
     text-indent: 2em;
     background-color:#f7f7f7;
+<<<<<<< HEAD
+    padding: 3% 5% 0;
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+=======
+>>>>>>> origin/master
 }
 
 .map-text-play header{
