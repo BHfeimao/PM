@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PM25.Models.Pedia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">百科知识数据</h2>
+
+<p>
+    @Html.ActionLink("添加", "Create")
+</p>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>*@
+        <th>操作</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>*@
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("查看", "Details", new { id=item.ID }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
