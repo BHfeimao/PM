@@ -250,13 +250,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\More\Show.cshtml" />
     <Content Include="Views\Home\Now.cshtml" />
     <Content Include="Views\Pedias\Create.cshtml" />
     <Content Include="Views\Pedias\Delete.cshtml" />
     <Content Include="Views\Pedias\Details.cshtml" />
     <Content Include="Views\Pedias\Edit.cshtml" />
     <Content Include="Views\Pedias\Index.cshtml" />
+    <Content Include="Views\More\Show.cshtml" />
     <None Include="Views\Summary\Detail.cshtml" />
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />

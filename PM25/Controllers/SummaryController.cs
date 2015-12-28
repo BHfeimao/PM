@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PM25.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace PM25.Controllers
         // GET: Summary
         public ActionResult Detail()
         {
+            
             return View("Detail");
+
         }
     }
 }
