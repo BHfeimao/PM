@@ -1,5 +1,4 @@
-﻿@model PM25.Models.Pedia
-
+﻿@model PM25.Models.BodyTem
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,32 +23,51 @@
 </head>
 <body style="margin:8px">
     <h2 style="background-color:#2a2828;color:white;margin:2px -8px">编辑</h2>
-
-
+    
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>百科</h4>
+            <h4>BodyTem</h4>
             <hr />
             @Html.ValidationSummary(true)
             @Html.HiddenFor(model => model.ID)
 
             <div class="form-group">
-                @Html.LabelFor(model => model.Title)
+                @Html.LabelFor(model => model.Img)
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Title)
-                    @Html.ValidationMessageFor(model => model.Title)
+                    @Html.TextAreaFor(model => model.Img)
+                    @Html.ValidationMessageFor(model => model.Img)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Summary)
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Summary)
+                    @Html.ValidationMessageFor(model => model.Summary)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Detail)
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Detail)
+                    @Html.ValidationMessageFor(model => model.Detail)
                 </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(model => model.Text)
                 <div class="container">
                     <div class="hero-unit">
+                        <div>
+                            <a id="get-img">拉取Img</a>&nbsp;&nbsp;&nbsp;
+                            <a id="get-summary">拉取Summary</a>&nbsp;&nbsp;&nbsp;
+                            <a id="get-detail">拉取Detail</a>&nbsp;&nbsp;&nbsp;
+                        </div>
                         <h1 style="font-size:28px">
-                            文本修改<br />
-                            <small style="font-size:16px">请编辑内容：</small>
+                            文本编辑<br />
+                            <small style="font-size:16px">请输入内容：</small>
                         </h1>
                         <hr />
                         <div id="alerts"></div>
@@ -102,9 +120,9 @@
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
 
                                 @*<div class="dropdown-menu input-append">
-                                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                        <button class="btn" type="button">Add</button>
-                                    </div>*@
+                                <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                                <button class="btn" type="button">Add</button>
+                            </div>*@
                                 <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
 
                             </div>
@@ -121,16 +139,36 @@
                         </div>
 
                         <div id="editor">
-                            ***请先生成HTML，再提交到数据库***
+                            ***请先拉取，再编辑修改数据***<br/>
+                            ***请先置入，再提交到数据库***
                         </div>
-                        <a id="build-html" >生成HTML</a>
-                        @Html.TextAreaFor(model => model.Text)
+                        <div>
+                            <a id="input-img">置入Img</a>&nbsp;&nbsp;&nbsp;
+                            <a id="input-summary">置入Summary</a>&nbsp;&nbsp;&nbsp;
+                            <a id="input-detail">置入Detail</a>&nbsp;&nbsp;&nbsp;
+                        </div>
                     </div>
                     <script>
-                        $("textarea#Text").css({ width: "1023px", height: "170px" })
-                        editor.innerHTML = $("textarea#Text").text()
-                        $("#build-html").click(function () {
-                            $("textarea#Text").val(editor.innerHTML)
+                        $("#input-img").click(function () {
+                            $("#Img").val(editor.innerHTML);
+                            editor.innerHTML = "";
+                        })
+                        $("#input-summary").click(function () {
+                            $("#Summary").val(editor.innerHTML);
+                            editor.innerHTML = "";
+                        })
+                        $("#input-detail").click(function () {
+                            $("#Detail").val(editor.innerHTML);
+                            editor.innerHTML = "";
+                        })
+                        $("#get-img").click(function () {
+                            editor.innerHTML = $("#Img").text();
+                        })
+                        $("#get-summary").click(function () {
+                            editor.innerHTML = $("#Summary").text();
+                        })
+                        $("#get-detail").click(function () {
+                            editor.innerHTML = $("#Detail").text();
                         })
                         $(function () {
                             function initToolbarBootstrapBindings() {
@@ -222,17 +260,9 @@
                         }(document, "script", "twitter-wjs");</script>
                 </div>
             </div>
-            @*<div class="form-group">
-                    @Html.LabelFor(model => model.Text)
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Text)
-                        @Html.ValidationMessageFor(model => model.Text)
-                    </div>
-                </div>*@
-
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="保存" class="btn btn-default" />
+                    <input type="submit" value="提交到数据库" class="btn btn-default" />
                 </div>
             </div>
         </div>
@@ -241,8 +271,24 @@
     <div>
         @Html.ActionLink("返回", "Index")
     </div>
+    <style>
+        #Summary {
+            width: 500px;
+            height: 60px;
+        }
+
+        #Img {
+            width: 500px;
+            height: 60px;
+        }
+
+        #Detail {
+            width: 500px;
+            height: 60px;
+        }
+    </style>
     </body>
 </html>
     @*@section Scripts {
-            @Scripts.Render("~/bundles/jqueryval")
-        }*@
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
