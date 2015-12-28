@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BodyTemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoreController.cs" />
@@ -205,6 +206,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BodyTem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pedia.cs" />
@@ -256,7 +258,15 @@
     <Content Include="Views\Pedias\Details.cshtml" />
     <Content Include="Views\Pedias\Edit.cshtml" />
     <Content Include="Views\Pedias\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\More\Show.cshtml" />
+=======
+    <Content Include="Views\BodyTems\Create.cshtml" />
+    <Content Include="Views\BodyTems\Delete.cshtml" />
+    <Content Include="Views\BodyTems\Details.cshtml" />
+    <Content Include="Views\BodyTems\Edit.cshtml" />
+    <Content Include="Views\BodyTems\Index.cshtml" />
+>>>>>>> origin/master
     <None Include="Views\Summary\Detail.cshtml" />
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />

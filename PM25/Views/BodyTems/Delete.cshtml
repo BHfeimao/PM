@@ -1,29 +1,36 @@
-﻿@model PM25.Models.Pedia
+﻿@model PM25.Models.BodyTem
 
 <title>删除</title>
-<script src="~/Scripts/jquery-1.10.2.js"></script>
 <h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">删除</h2>
 <h3>你确定要删除以下内容？</h3>
 <div>
-    <h4>百科</h4>
+    <h4>BodyTem</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Img)
         </dt>
 
         <dd>
-            @Model.Title
+            @MvcHtmlString.Create(@Model.Img)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Text)
+            @Html.DisplayNameFor(model => model.Summary)
         </dt>
 
         <dd>
-            @MvcHtmlString.Create(@Model.Text)
+            @MvcHtmlString.Create(@Model.Summary)
         </dd>
-       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @MvcHtmlString.Create(@Model.Detail)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
@@ -35,4 +42,3 @@
         </div>
     }
 </div>
-
