@@ -20,7 +20,12 @@ namespace PM25.Controllers
 
         public ActionResult Bodytem()
         {
-            return View("Summary");
+            return View("SummaryBT");
+        }
+
+        public ActionResult Infrared()
+        {
+            return View("SummaryIF");
         }
 
         public ActionResult Now()
@@ -28,11 +33,9 @@ namespace PM25.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult New()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View("SummaryNEW");
         }
     }
 }

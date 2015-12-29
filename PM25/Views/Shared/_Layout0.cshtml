@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +27,29 @@
     </div>
     <!--以上为Header部分-->
     <div class="render-body">
-        @RenderBody()
+        <div class="con-L">
+            <h1>
+                <span class="title">百科知识</span>
+                <span class="more">@Html.ActionLink("MORE", "More_info", "Home")</span>
+            </h1>
+            <ul>
+                <li>雾霾天应该停止所有的健身锻炼吗？</li>
+                <li>家用PM2.5检测仪测量的数据不靠谱</li>
+                <li>严重雾霾天，还能继续佩戴隐形眼镜</li>
+                <li>什么时段、什么季节PM2.5浓度最高？</li>
+                <li>24小时内我们吸入了多少PM2.5？</li>
+                <li>为什么冬季供暖对空气的污染贡献..</li>
+                <li>车载净化器能去除车内的PM2.5吗？</li>
+                <li>商场内的空气很伤人</li>
+                <li>雾霾为什么会影响能见度？</li>
+                <li>外界的气象条件会对雾霾产生怎样.</li>
+                <li>防雾霾这些你都做对了吗？盘点防.</li>
+                <li>露天烧烤：潜在危害知多少</li>
+            </ul>
+        </div>
+        <div class="con-R">
+            @RenderBody()
+        </div>
     </div>
     <div class="footer">
         <h2>欢迎您访问我们的科普网站</h2>

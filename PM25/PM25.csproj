@@ -264,7 +264,10 @@
     <Content Include="Views\BodyTems\Details.cshtml" />
     <Content Include="Views\BodyTems\Edit.cshtml" />
     <Content Include="Views\BodyTems\Index.cshtml" />
-    <None Include="Views\Summary\Detail.cshtml" />
+    <Content Include="Views\Shared\_Layout0.cshtml" />
+    <Content Include="Views\Home\SummaryIF.cshtml" />
+    <Content Include="Views\Home\SummaryNEW.cshtml" />
+    <None Include="Views\Summary\DetailBT.cshtml" />
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -300,7 +303,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Summary.cshtml" />
+    <Content Include="Views\Home\SummaryBT.cshtml" />
+    <Content Include="Views\Summary\DetailIF.cshtml" />
+    <Content Include="Views\Summary\DetailNEW.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
