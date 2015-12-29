@@ -252,22 +252,29 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\More\Show.cshtml" />
     <Content Include="Views\Home\Now.cshtml" />
     <Content Include="Views\Pedias\Create.cshtml" />
     <Content Include="Views\Pedias\Delete.cshtml" />
     <Content Include="Views\Pedias\Details.cshtml" />
     <Content Include="Views\Pedias\Edit.cshtml" />
     <Content Include="Views\Pedias\Index.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\More\Show.cshtml" />
+=======
     <Content Include="Views\BodyTems\Create.cshtml" />
     <Content Include="Views\BodyTems\Delete.cshtml" />
     <Content Include="Views\BodyTems\Details.cshtml" />
     <Content Include="Views\BodyTems\Edit.cshtml" />
     <Content Include="Views\BodyTems\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Shared\_Layout0.cshtml" />
     <Content Include="Views\Home\SummaryIF.cshtml" />
     <Content Include="Views\Home\SummaryNEW.cshtml" />
     <None Include="Views\Summary\DetailBT.cshtml" />
+=======
+>>>>>>> origin/master
+    <None Include="Views\Summary\Detail.cshtml" />
+>>>>>>> origin/master
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

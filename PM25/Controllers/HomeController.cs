@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PM25.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,9 @@ namespace PM25.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            PediaDBContext db = new PediaDBContext(); 
+            
+            return View(db.Pedias.ToList());
         }
 
         public ActionResult More_info()

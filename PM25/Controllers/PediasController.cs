@@ -67,6 +67,7 @@ namespace PM25.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Pedia pedia = db.Pedias.Find(id);
+            
             if (pedia == null)
             {
                 return HttpNotFound();
