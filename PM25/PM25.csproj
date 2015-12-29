@@ -196,16 +196,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BodyTemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoreController.cs" />
+    <Compile Include="Controllers\PediasController.cs" />
     <Compile Include="Controllers\SummaryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BodyTem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Pedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -219,6 +223,7 @@
     <Content Include="Content\Img\logo_2.gif" />
     <Content Include="Content\Img\wumai.jpg" />
     <Content Include="Content\Index.css" />
+    <Content Include="Content\indexWYS.css" />
     <Content Include="Content\More.css" />
     <Content Include="Content\Now.css" />
     <Content Include="Content\Show.css" />
@@ -229,6 +234,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap-wysiwyg.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -246,9 +252,29 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\More\Show.cshtml" />
     <Content Include="Views\Home\Now.cshtml" />
+    <Content Include="Views\Pedias\Create.cshtml" />
+    <Content Include="Views\Pedias\Delete.cshtml" />
+    <Content Include="Views\Pedias\Details.cshtml" />
+    <Content Include="Views\Pedias\Edit.cshtml" />
+    <Content Include="Views\Pedias\Index.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\More\Show.cshtml" />
+=======
+    <Content Include="Views\BodyTems\Create.cshtml" />
+    <Content Include="Views\BodyTems\Delete.cshtml" />
+    <Content Include="Views\BodyTems\Details.cshtml" />
+    <Content Include="Views\BodyTems\Edit.cshtml" />
+    <Content Include="Views\BodyTems\Index.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Shared\_Layout0.cshtml" />
+    <Content Include="Views\Home\SummaryIF.cshtml" />
+    <Content Include="Views\Home\SummaryNEW.cshtml" />
+    <None Include="Views\Summary\DetailBT.cshtml" />
+=======
+>>>>>>> origin/master
     <None Include="Views\Summary\Detail.cshtml" />
+>>>>>>> origin/master
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -284,10 +310,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Summary.cshtml" />
+    <Content Include="Views\Home\SummaryBT.cshtml" />
+    <Content Include="Views\Summary\DetailIF.cshtml" />
+    <Content Include="Views\Summary\DetailNEW.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\external\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

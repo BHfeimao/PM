@@ -1,0 +1,38 @@
+﻿@model PM25.Models.Pedia
+
+<title>删除</title>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">删除</h2>
+<h3>你确定要删除以下内容？</h3>
+<div>
+    <h4>百科</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Model.Title
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @MvcHtmlString.Create(@Model.Text)
+        </dd>
+       
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回", "Index")
+        </div>
+    }
+</div>
+
