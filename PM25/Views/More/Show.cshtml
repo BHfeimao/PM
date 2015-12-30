@@ -1,6 +1,4 @@
-﻿@*@model IEnumerable<PM25.Models.Pedia>*@
-@model PM25.Models.Pedia
-@Styles.Render("~/Content/Show.css")
+﻿@Styles.Render("~/Content/Show.css")
 @{
     ViewBag.Title = "Show";
 }
@@ -10,13 +8,12 @@
 <div class="map-text-play">
 
     <div class="map-text" id="sss">     
-        @MvcHtmlString.Create(@Model.Text)
-        
+        @*@MvcHtmlString.Create(@Model.Text)*@
         @*@Html.DisplayNameFor(model => model.Text)  
         @Html.DisplayFor(model => model.Text)*@
         @*@Html.TextAreaFor(model => model.Text)*@
         @*@Html.TextAreaFor(model=> model.Text)*@
-        @*<li>
+        <li>
                 <h4>一、雾霾天不适合 室外运动</h4>
                 <p>
                     雾霾对人体最直接、影响最大的莫过于对呼吸系统造成的伤害了。本身患有呼吸系统
@@ -70,6 +67,6 @@
                     雾霾天气下可以改在室内进行锻炼，另外锻炼的方式和强度都应该进行相应的调整。
                     可以做一些有氧运动，比如羽毛球、乒乓球、游泳、瑜伽、肩颈操、太极这些较为舒缓、
                     可以牵拉放松身体、增加肌肉稳定性的健身项目。
-                </p>*@
+                </p>
     </div>
 </div>

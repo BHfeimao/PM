@@ -12,7 +12,7 @@ namespace PM25.Controllers
 {
     public class PediasController : Controller
     {
-        private PediaDBContext db = new PediaDBContext();
+        private DataDBContext db = new DataDBContext();
 
         // GET: Pedias
         public ActionResult Index()
@@ -46,8 +46,7 @@ namespace PM25.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "ID,Title,Text")] Pedia pedia)
+        public ActionResult Create([Bind(Include = "ID,title,text")] Pedia pedia)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +66,6 @@ namespace PM25.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Pedia pedia = db.Pedias.Find(id);
-            
             if (pedia == null)
             {
                 return HttpNotFound();
@@ -80,8 +78,7 @@ namespace PM25.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "ID,Title,Text")] Pedia pedia)
+        public ActionResult Edit([Bind(Include = "ID,title,text")] Pedia pedia)
         {
             if (ModelState.IsValid)
             {

@@ -10,107 +10,107 @@ using PM25.Models;
 
 namespace PM25.Controllers
 {
-    public class BodyTemsController : Controller
+    public class HomesController : Controller
     {
         private DataDBContext db = new DataDBContext();
 
-        // GET: BodyTems
+        // GET: Homes
         public ActionResult Index()
         {
-            return View(db.BodyTems.ToList());
+            return View(db.Homes.ToList());
         }
 
-        // GET: BodyTems/Details/5
+        // GET: Homes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Home home = db.Homes.Find(id);
+            if (home == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(home);
         }
 
-        // GET: BodyTems/Create
+        // GET: Homes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BodyTems/Create
+        // POST: Homes/Create
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Create([Bind(Include = "ID,preface")] Home home)
         {
             if (ModelState.IsValid)
             {
-                db.BodyTems.Add(bodyTem);
+                db.Homes.Add(home);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bodyTem);
+            return View(home);
         }
 
-        // GET: BodyTems/Edit/5
+        // GET: Homes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Home home = db.Homes.Find(id);
+            if (home == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(home);
         }
 
-        // POST: BodyTems/Edit/5
+        // POST: Homes/Edit/5
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Edit([Bind(Include = "ID,preface")] Home home)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bodyTem).State = EntityState.Modified;
+                db.Entry(home).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bodyTem);
+            return View(home);
         }
 
-        // GET: BodyTems/Delete/5
+        // GET: Homes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Home home = db.Homes.Find(id);
+            if (home == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(home);
         }
 
-        // POST: BodyTems/Delete/5
+        // POST: Homes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            db.BodyTems.Remove(bodyTem);
+            Home home = db.Homes.Find(id);
+            db.Homes.Remove(home);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

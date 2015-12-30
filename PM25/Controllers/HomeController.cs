@@ -11,9 +11,7 @@ namespace PM25.Controllers
     {
         public ActionResult Index()
         {
-            PediaDBContext db = new PediaDBContext(); 
-            
-            return View(db.Pedias.ToList());
+            return View();
         }
 
         public ActionResult More_info()
@@ -23,7 +21,7 @@ namespace PM25.Controllers
 
         public ActionResult Bodytem()
         {
-            return View("SummaryBT");
+            return View();
         }
 
         public ActionResult Infrared()
@@ -33,6 +31,7 @@ namespace PM25.Controllers
 
         public ActionResult Now()
         {
+            
             return View();
         }
 

@@ -10,107 +10,107 @@ using PM25.Models;
 
 namespace PM25.Controllers
 {
-    public class BodyTemsController : Controller
+    public class NewsController : Controller
     {
         private DataDBContext db = new DataDBContext();
 
-        // GET: BodyTems
+        // GET: News
         public ActionResult Index()
         {
-            return View(db.BodyTems.ToList());
+            return View(db.News.ToList());
         }
 
-        // GET: BodyTems/Details/5
+        // GET: News/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            New @new = db.News.Find(id);
+            if (@new == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(@new);
         }
 
-        // GET: BodyTems/Create
+        // GET: News/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BodyTems/Create
+        // POST: News/Create
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] New @new)
         {
             if (ModelState.IsValid)
             {
-                db.BodyTems.Add(bodyTem);
+                db.News.Add(@new);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bodyTem);
+            return View(@new);
         }
 
-        // GET: BodyTems/Edit/5
+        // GET: News/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            New @new = db.News.Find(id);
+            if (@new == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(@new);
         }
 
-        // POST: BodyTems/Edit/5
+        // POST: News/Edit/5
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] New @new)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bodyTem).State = EntityState.Modified;
+                db.Entry(@new).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bodyTem);
+            return View(@new);
         }
 
-        // GET: BodyTems/Delete/5
+        // GET: News/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            New @new = db.News.Find(id);
+            if (@new == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(@new);
         }
 
-        // POST: BodyTems/Delete/5
+        // POST: News/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            db.BodyTems.Remove(bodyTem);
+            New @new = db.News.Find(id);
+            db.News.Remove(@new);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -10,107 +10,107 @@ using PM25.Models;
 
 namespace PM25.Controllers
 {
-    public class BodyTemsController : Controller
+    public class InfrasController : Controller
     {
         private DataDBContext db = new DataDBContext();
 
-        // GET: BodyTems
+        // GET: Infras
         public ActionResult Index()
         {
-            return View(db.BodyTems.ToList());
+            return View(db.Infras.ToList());
         }
 
-        // GET: BodyTems/Details/5
+        // GET: Infras/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Infra infra = db.Infras.Find(id);
+            if (infra == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(infra);
         }
 
-        // GET: BodyTems/Create
+        // GET: Infras/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BodyTems/Create
+        // POST: Infras/Create
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] Infra infra)
         {
             if (ModelState.IsValid)
             {
-                db.BodyTems.Add(bodyTem);
+                db.Infras.Add(infra);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bodyTem);
+            return View(infra);
         }
 
-        // GET: BodyTems/Edit/5
+        // GET: Infras/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Infra infra = db.Infras.Find(id);
+            if (infra == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(infra);
         }
 
-        // POST: BodyTems/Edit/5
+        // POST: Infras/Edit/5
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] Infra infra)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bodyTem).State = EntityState.Modified;
+                db.Entry(infra).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bodyTem);
+            return View(infra);
         }
 
-        // GET: BodyTems/Delete/5
+        // GET: Infras/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Infra infra = db.Infras.Find(id);
+            if (infra == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(infra);
         }
 
-        // POST: BodyTems/Delete/5
+        // POST: Infras/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            db.BodyTems.Remove(bodyTem);
+            Infra infra = db.Infras.Find(id);
+            db.Infras.Remove(infra);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

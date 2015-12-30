@@ -1,5 +1,4 @@
-﻿
-<html lang="en">
+﻿<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
@@ -25,7 +24,7 @@
         </div>
     </div>
     <!--以上为Header部分-->
-    @model IEnumerable<PM25.Models.Pedia>
+
     <div class="render-body">
         <div class="con-L">
             <h1>
@@ -33,10 +32,7 @@
                 <span class="more">@Html.ActionLink("MORE", "More_info", "Home")</span>
             </h1>
             <ul>
-                @foreach (var item in Model)
-                {
-                    <li><a href="~/More/Show/@Html.DisplayFor(modelItem => item.ID)">@Html.DisplayFor(modelItem => item.Title)</a></li>
-                }
+               
                 <li>雾霾天应该停止所有的健身锻炼吗？</li>
                 <li>家用PM2.5检测仪测量的数据不靠谱</li>
                 <li>严重雾霾天，还能继续佩戴隐形眼镜</li>

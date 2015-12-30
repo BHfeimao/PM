@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PM25.Models.BodyTem>
+﻿@model IEnumerable<PM25.Models.Now>
 
 @{
     ViewBag.Title = "Index";
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.img)
+            @Html.DisplayNameFor(model => model.title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.summary)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.detail)
+            @Html.DisplayNameFor(model => model.downloadURL)
         </th>
         <th></th>
     </tr>
@@ -26,13 +26,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.img)
+            @Html.DisplayFor(modelItem => item.title)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.summary)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.detail)
+            @Html.DisplayFor(modelItem => item.downloadURL)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

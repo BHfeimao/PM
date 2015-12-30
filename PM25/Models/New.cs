@@ -5,10 +5,11 @@ using System.Web;
 
 namespace PM25.Models
 {
-    public class Pedia
+    public class New
     {
         public int ID { get; set; }
-        public string title { get; set; }
-        public string text { get; set; }
+        public string img { get; set; }
+        public string summary { get; set; }
+        public string detail { get; set; }
     }
 }

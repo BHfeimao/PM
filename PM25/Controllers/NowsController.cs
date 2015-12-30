@@ -10,107 +10,107 @@ using PM25.Models;
 
 namespace PM25.Controllers
 {
-    public class BodyTemsController : Controller
+    public class NowsController : Controller
     {
         private DataDBContext db = new DataDBContext();
 
-        // GET: BodyTems
+        // GET: Nows
         public ActionResult Index()
         {
-            return View(db.BodyTems.ToList());
+            return View(db.Nows.ToList());
         }
 
-        // GET: BodyTems/Details/5
+        // GET: Nows/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Now now = db.Nows.Find(id);
+            if (now == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(now);
         }
 
-        // GET: BodyTems/Create
+        // GET: Nows/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BodyTems/Create
+        // POST: Nows/Create
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Create([Bind(Include = "ID,title,summary,downloadURL")] Now now)
         {
             if (ModelState.IsValid)
             {
-                db.BodyTems.Add(bodyTem);
+                db.Nows.Add(now);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(bodyTem);
+            return View(now);
         }
 
-        // GET: BodyTems/Edit/5
+        // GET: Nows/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Now now = db.Nows.Find(id);
+            if (now == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(now);
         }
 
-        // POST: BodyTems/Edit/5
+        // POST: Nows/Edit/5
         // 为了防止“过多发布”攻击，请启用要绑定到的特定属性，有关 
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,img,summary,detail")] BodyTem bodyTem)
+        public ActionResult Edit([Bind(Include = "ID,title,summary,downloadURL")] Now now)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(bodyTem).State = EntityState.Modified;
+                db.Entry(now).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(bodyTem);
+            return View(now);
         }
 
-        // GET: BodyTems/Delete/5
+        // GET: Nows/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            if (bodyTem == null)
+            Now now = db.Nows.Find(id);
+            if (now == null)
             {
                 return HttpNotFound();
             }
-            return View(bodyTem);
+            return View(now);
         }
 
-        // POST: BodyTems/Delete/5
+        // POST: Nows/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BodyTem bodyTem = db.BodyTems.Find(id);
-            db.BodyTems.Remove(bodyTem);
+            Now now = db.Nows.Find(id);
+            db.Nows.Remove(now);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

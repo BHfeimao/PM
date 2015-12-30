@@ -198,8 +198,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BodyTemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomesController.cs" />
+    <Compile Include="Controllers\InfrasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoreController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\NowsController.cs" />
     <Compile Include="Controllers\PediasController.cs" />
     <Compile Include="Controllers\SummaryController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,8 +211,12 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BodyTem.cs" />
+    <Compile Include="Models\Home.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Infra.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\New.cs" />
+    <Compile Include="Models\Now.cs" />
     <Compile Include="Models\Pedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -258,9 +266,7 @@
     <Content Include="Views\Pedias\Details.cshtml" />
     <Content Include="Views\Pedias\Edit.cshtml" />
     <Content Include="Views\Pedias\Index.cshtml" />
-
     <Content Include="Views\More\Show.cshtml" />
-
     <Content Include="Views\BodyTems\Create.cshtml" />
     <Content Include="Views\BodyTems\Delete.cshtml" />
     <Content Include="Views\BodyTems\Details.cshtml" />
@@ -269,9 +275,31 @@
     <Content Include="Views\Shared\_Layout0.cshtml" />
     <Content Include="Views\Home\SummaryIF.cshtml" />
     <Content Include="Views\Home\SummaryNEW.cshtml" />
+    <Content Include="Views\Homes\Create.cshtml" />
+    <Content Include="Views\Homes\Delete.cshtml" />
+    <Content Include="Views\Homes\Details.cshtml" />
+    <Content Include="Views\Homes\Edit.cshtml" />
+    <Content Include="Views\Homes\Index.cshtml" />
+    <Content Include="Views\Infras\Create.cshtml" />
+    <Content Include="Views\Infras\Delete.cshtml" />
+    <Content Include="Views\Infras\Details.cshtml" />
+    <Content Include="Views\Infras\Edit.cshtml" />
+    <Content Include="Views\Infras\Index.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Nows\Create.cshtml" />
+    <Content Include="Views\Nows\Delete.cshtml" />
+    <Content Include="Views\Nows\Details.cshtml" />
+    <Content Include="Views\Nows\Edit.cshtml" />
+    <Content Include="Views\Nows\Index.cshtml" />
     <None Include="Views\Summary\DetailBT.cshtml" />
     <None Include="Views\Home\More.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -305,7 +333,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\SummaryBT.cshtml" />
+    <Content Include="Views\Home\BodyTem.cshtml" />
     <Content Include="Views\Summary\DetailIF.cshtml" />
     <Content Include="Views\Summary\DetailNEW.cshtml" />
   </ItemGroup>

@@ -1,35 +1,37 @@
 ﻿@model IEnumerable<PM25.Models.Pedia>
 
-<title>百科知识库</title>
-<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">百科知识库</h2>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("添加", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
-<hr />
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.title)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Text)
-        </th>*@
-        <th>操作</th>
+        <th>
+            @Html.DisplayNameFor(model => model.text)
+        </th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            @Html.DisplayFor(modelItem => item.title)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Text)
-        </td>*@
         <td>
-            @Html.ActionLink("编辑", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("查看", "Details", new { id=item.ID }) |
-            @Html.ActionLink("删除", "Delete", new { id=item.ID })
+            @Html.DisplayFor(modelItem => item.text)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

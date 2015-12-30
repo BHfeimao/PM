@@ -1,38 +1,42 @@
 ﻿@model PM25.Models.BodyTem
 
-<title>查看</title>
-<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">查看</h2>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
 <div>
     <h4>BodyTem</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Img)
+            @Html.DisplayNameFor(model => model.img)
         </dt>
 
         <dd>
-            @MvcHtmlString.Create(@Model.Img)
+            @Html.DisplayFor(model => model.img)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Summary)
+            @Html.DisplayNameFor(model => model.summary)
         </dt>
 
         <dd>
-            @MvcHtmlString.Create(@Model.Summary)
+            @Html.DisplayFor(model => model.summary)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Detail)
+            @Html.DisplayNameFor(model => model.detail)
         </dt>
 
         <dd>
-            @MvcHtmlString.Create(@Model.Detail)
+            @Html.DisplayFor(model => model.detail)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("返回", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

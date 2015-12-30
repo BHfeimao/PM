@@ -1,4 +1,4 @@
-﻿@model PM25.Models.Pedia
+﻿@model PM25.Models.Now
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Pedia</h4>
+    <h4>Now</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,11 +19,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.text)
+            @Html.DisplayNameFor(model => model.summary)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.text)
+            @Html.DisplayFor(model => model.summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.downloadURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.downloadURL)
         </dd>
 
     </dl>
