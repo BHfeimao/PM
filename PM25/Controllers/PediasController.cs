@@ -46,6 +46,7 @@ namespace PM25.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "ID,title,text")] Pedia pedia)
         {
             if (ModelState.IsValid)
@@ -78,6 +79,7 @@ namespace PM25.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "ID,title,text")] Pedia pedia)
         {
             if (ModelState.IsValid)

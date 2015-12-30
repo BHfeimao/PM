@@ -1,13 +1,9 @@
 ﻿@model PM25.Models.Pedia
 
-@{
-    ViewBag.Title = "Details";
-}
-
-<h2>Details</h2>
-
+<title>查看</title>
+<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">查看</h2>
 <div>
-    <h4>Pedia</h4>
+    <h4>百科</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -15,7 +11,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.title)
+            @Model.title
         </dd>
 
         <dt>
@@ -23,12 +19,13 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.text)
+            @MvcHtmlString.Create(@Model.text)
         </dd>
+
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("编辑", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("返回", "Index")
 </p>
