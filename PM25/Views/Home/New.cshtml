@@ -1,6 +1,6 @@
-﻿@model PM25.Controllers.HomeController.BTModel
+﻿@model PM25.Controllers.HomeController.NEWModel
 @{
-    ViewBag.Title = "体温与疾病";
+    ViewBag.Title = "新闻动态";
 }
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,25 +17,20 @@
         {
             ViewBag.i++;
             if (ViewBag.i > 12) { break; }
-            <li><nobr><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a>
-                </nobr></li>
+            <li><nobr><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a></nobr></li>
         }
     </ul>
 </div>
-
 <div class="con-R">
     <ul>
-        @foreach (var item in Model.BodyTems)
+        @foreach (var item in Model.News)
         {
             <li>
                 <div class="R"><div class="img">@MvcHtmlString.Create(item.img)</div></div>
                 <p>
-                    @MvcHtmlString.Create(item.summary)<span><a href="/Summary/DetailBT/@item.ID">【全文】</a></span>
+                    @MvcHtmlString.Create(item.summary)<span><a href="/Summary/DetailNEW/@item.ID">【全文】</a></span>
                 </p>
             </li>
         }
     </ul>
 </div>
-    
-
-

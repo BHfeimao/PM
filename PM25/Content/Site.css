@@ -116,6 +116,8 @@ body {
     padding: 1px 10px 0px 30px;
     font-family: -webkit-pictograph;
     cursor:pointer;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .con-L li:hover{
     color: #1a87ff;
@@ -129,4 +131,3 @@ body {
     background-color: #f7f7f7;
     font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
-

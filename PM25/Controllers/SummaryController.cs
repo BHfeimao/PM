@@ -10,17 +10,33 @@ namespace PM25.Controllers
     public class SummaryController : Controller
     {
         // GET: Summary
-        public ActionResult DetailBT()
+        public DataDBContext db = new DataDBContext();
+        public ActionResult DetailBT(int id)
         {
-            return View("DetailBT");
+            ViewBag.i = 0;
+            var vm = new HomeController.BTModel(db.Pedias.ToList(), db.BodyTems.ToList());
+            vm.BodyTems = db.BodyTems.ToList();
+            vm.Pedias = db.Pedias.ToList();
+            ViewBag.id = id;
+            return View(vm);
         }
-        public ActionResult DetailIF()
+        public ActionResult DetailIF(int id)
         {
-            return View("DetailIF");
+            ViewBag.i = 0;
+            var vm = new HomeController.IFModel(db.Pedias.ToList(), db.Infras.ToList());
+            vm.Infras = db.Infras.ToList();
+            vm.Pedias = db.Pedias.ToList();
+            ViewBag.id = id;
+            return View(vm);
         }
-        public ActionResult DetailNEW()
+        public ActionResult DetailNEW(int id)
         {
-            return View("DetailNEW");
+            ViewBag.i = 0;
+            var vm = new HomeController.NEWModel(db.Pedias.ToList(), db.News.ToList());
+            vm.News = db.News.ToList();
+            vm.Pedias = db.Pedias.ToList();
+            ViewBag.id = id;
+            return View(vm);
         }
     }
 }
