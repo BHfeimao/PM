@@ -273,8 +273,8 @@
     <Content Include="Views\BodyTems\Edit.cshtml" />
     <Content Include="Views\BodyTems\Index.cshtml" />
     <Content Include="Views\Shared\_Layout0.cshtml" />
-    <Content Include="Views\Home\SummaryIF.cshtml" />
-    <Content Include="Views\Home\SummaryNEW.cshtml" />
+    <Content Include="Views\Home\Infrared.cshtml" />
+    <Content Include="Views\Home\New.cshtml" />
     <Content Include="Views\Homes\Create.cshtml" />
     <Content Include="Views\Homes\Delete.cshtml" />
     <Content Include="Views\Homes\Details.cshtml" />

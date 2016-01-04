@@ -20,6 +20,7 @@ namespace PM25.Controllers
                 this.Pedias = PediaList;
             }
         }
+<<<<<<< HEAD
         public class NowModel
         {
             public List<Pedia> Pedias { get; set; }
@@ -30,6 +31,39 @@ namespace PM25.Controllers
                 this.Nows = NowList;
             }                  
         }
+=======
+        public class BTModel
+        {
+            public List<Pedia> Pedias { get; set; }
+            public List<BodyTem> BodyTems { get; set; }
+            public BTModel(List<Pedia> PediaList, List<BodyTem> BodyTemList)
+            {
+                this.Pedias = PediaList;
+                this.BodyTems = BodyTemList;
+            }
+        }
+        public class IFModel
+        {
+            public List<Pedia> Pedias { get; set; }
+            public List<Infra> Infras { get; set; }
+            public IFModel(List<Pedia> PediaList,List<Infra>InfraList)
+            {
+                this.Pedias = PediaList;
+                this.Infras = InfraList;
+            }
+        }
+        public class NEWModel
+        {
+            public List<Pedia> Pedias { get; set; }
+            public List<New> News { get; set; }
+            public NEWModel(List<Pedia> PediaList,List<New> NewList)
+            {
+                this.Pedias = PediaList;
+                this.News = NewList;
+            }
+        }
+
+>>>>>>> origin/master
         public ActionResult Index()
         {
             var vm = new IndexModel(db.Homes.ToList(), db.Pedias.ToList());
@@ -38,18 +72,33 @@ namespace PM25.Controllers
             ViewBag.i = 0;      
             return View(vm);           
         }
+<<<<<<< HEAD
         public ActionResult More()
         {          
             return View(db.Pedias);
+=======
+
+        public ActionResult More()
+        {
+            return View();
+>>>>>>> origin/master
         }
         public ActionResult Bodytem()
         {
-            return View();
+            ViewBag.i = 0;
+            var vm = new BTModel(db.Pedias.ToList(), db.BodyTems.ToList());
+            vm.BodyTems = db.BodyTems.ToList();
+            vm.Pedias = db.Pedias.ToList();
+            return View(vm);
         }
 
         public ActionResult Infrared()
         {
-            return View("SummaryIF");
+            ViewBag.i = 0;
+            var vm = new IFModel(db.Pedias.ToList(), db.Infras.ToList());
+            vm.Pedias = db.Pedias.ToList();
+            vm.Infras = db.Infras.ToList();
+            return View(vm);
         }
 
         public ActionResult Now()
@@ -61,7 +110,11 @@ namespace PM25.Controllers
         }
         public ActionResult New()
         {
-            return View("SummaryNEW");
+            ViewBag.i = 0;
+            var vm = new NEWModel(db.Pedias.ToList(), db.News.ToList());
+            vm.Pedias = db.Pedias.ToList();
+            vm.News = db.News.ToList();
+            return View(vm);
         }
     }
 }
