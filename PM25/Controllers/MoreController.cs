@@ -15,7 +15,10 @@ namespace PM25.Controllers
         // GET: More
         public ActionResult Show(int? id )
         {
-            return View();
+            DataDBContext db = new DataDBContext();
+            Pedia pd= db.Pedias.Find(id);          
+            return View(pd);
+            
         }
     }
 }

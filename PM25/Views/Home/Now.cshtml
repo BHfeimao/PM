@@ -1,13 +1,48 @@
-﻿@{
+﻿@model PM25.Controllers.HomeController.NowModel
+@{
     ViewBag.Title = "Now";
 }
 @{
-    Layout = "~/Views/Shared/_Layout0.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @Styles.Render("~/Content/Now.css")
-
-        <ul class="text">
+         <div class="con-L">
+                <h1>
+                     <span class="title">百科知识</span>
+                     <span class="more">@Html.ActionLink("MORE", "More", "Home")</span>
+                </h1>
+                <ul>
+                    @foreach (var n in Model.Pedias)
+                {
+                    <li><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a></li>
+                }
+                </ul>
+            </div>
+           <div class="con-R">
+               <ul class="text">
+                   
+                       @foreach (var n in Model.Nows)
+                       {
+                        
+                        <li>
+                           <h4> @MvcHtmlString.Create(n.title)</h4>
+                            <button>
+                                下载全文
+                            </button>                                               
+                            <p>
+                            @MvcHtmlString.Create(n.summary)
+                            </p>
+                        </li>                                             
+                   }
+                   </ul>
+               
+               </div>
+                   
+                
+@*</div>
+        
+<ul class="text">
             <li class="list-text">
                 <h4>石家庄公布雾霾元凶 燃煤扬尘是首要污染源</h4>
                 <button class="btn">下载全文</button>
@@ -101,4 +136,4 @@
                     化对治霾工作做出评价指导。
                 </p>
             </li>
-        </ul>
+        </ul>*@

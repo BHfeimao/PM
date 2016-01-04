@@ -116,10 +116,16 @@ body {
     padding: 1px 10px 0px 30px;
     font-family: -webkit-pictograph;
     cursor:pointer;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .con-L li:hover{
     color: #1a87ff;
 }
+a {
+     text-decoration:none
+}
+
 .con-R {
     float: right;
     width: 68%;

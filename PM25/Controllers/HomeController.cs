@@ -20,19 +20,28 @@ namespace PM25.Controllers
                 this.Pedias = PediaList;
             }
         }
+        public class NowModel
+        {
+            public List<Pedia> Pedias { get; set; }
+            public List<Now> Nows { get; set; }
+            public NowModel(List<Pedia> PediaList, List<Now> NowList)
+            {
+                this.Pedias = PediaList;
+                this.Nows = NowList;
+            }                  
+        }
         public ActionResult Index()
         {
             var vm = new IndexModel(db.Homes.ToList(), db.Pedias.ToList());
             vm.Homes = db.Homes.ToList();
             vm.Pedias = db.Pedias.ToList();
-            return View(vm);
+            ViewBag.i = 0;      
+            return View(vm);           
         }
-
-        public ActionResult More_info()
-        {
-            return View("More");
+        public ActionResult More()
+        {          
+            return View(db.Pedias);
         }
-
         public ActionResult Bodytem()
         {
             return View();
@@ -45,10 +54,11 @@ namespace PM25.Controllers
 
         public ActionResult Now()
         {
-            
-            return View();
+            var vm = new NowModel(db.Pedias.ToList(), db.Nows.ToList());
+            vm.Pedias = db.Pedias.ToList();
+            vm.Nows = db.Nows.ToList();
+            return View(vm);
         }
-
         public ActionResult New()
         {
             return View("SummaryNEW");
