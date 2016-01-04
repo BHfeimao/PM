@@ -10,12 +10,11 @@ namespace PM25.Controllers
     public class HomeController : Controller
     {
         DataDBContext db = new DataDBContext();
-        public class viewModel
+        public class IndexModel
         {
             public List<Home> Homes { get; set; }
-            public List<Pedia> Pedias { get; set; }
-
-            public viewModel(List<Home> HomeList, List<Pedia> PediaList)
+            public List<Pedia> Pedias { get; set; }         
+            public IndexModel(List<Home> HomeList, List<Pedia> PediaList)
             {
                 this.Homes = HomeList;
                 this.Pedias = PediaList;
@@ -23,10 +22,7 @@ namespace PM25.Controllers
         }
         public ActionResult Index()
         {
-            
-            //ViewBag.testss = db.Pedias;
-            //ViewBag.testss2 = db.Homes;
-            var vm = new viewModel(db.Homes.ToList(), db.Pedias.ToList());
+            var vm = new IndexModel(db.Homes.ToList(), db.Pedias.ToList());
             vm.Homes = db.Homes.ToList();
             vm.Pedias = db.Pedias.ToList();
             return View(vm);

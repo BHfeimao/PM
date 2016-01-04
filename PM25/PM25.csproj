@@ -213,7 +213,6 @@
     <Compile Include="Models\BodyTem.cs" />
     <Compile Include="Models\Home.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\indexData.cs" />
     <Compile Include="Models\Infra.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\New.cs" />
