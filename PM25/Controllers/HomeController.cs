@@ -9,9 +9,27 @@ namespace PM25.Controllers
 {
     public class HomeController : Controller
     {
+        DataDBContext db = new DataDBContext();
+        public class viewModel
+        {
+            public List<Home> Homes { get; set; }
+            public List<Pedia> Pedias { get; set; }
+
+            public viewModel(List<Home> HomeList, List<Pedia> PediaList)
+            {
+                this.Homes = HomeList;
+                this.Pedias = PediaList;
+            }
+        }
         public ActionResult Index()
         {
-            return View();
+            
+            //ViewBag.testss = db.Pedias;
+            //ViewBag.testss2 = db.Homes;
+            var vm = new viewModel(db.Homes.ToList(), db.Pedias.ToList());
+            vm.Homes = db.Homes.ToList();
+            vm.Pedias = db.Pedias.ToList();
+            return View(vm);
         }
 
         public ActionResult More_info()
