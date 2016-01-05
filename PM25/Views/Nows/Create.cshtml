@@ -24,7 +24,6 @@
 <body style="margin:8px">
 
     <h2 style="background-color:#2a2828;color:white;margin:2px -8px">添加</h2>
-
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -50,7 +49,8 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.downloadURL)
+                <label for="downloadURL">downloadName</label>
+                @*@Html.LabelFor(model => model.downloadURL)*@
                 <div class="col-md-10">
                     @Html.TextAreaFor(model => model.downloadURL)
                     @Html.ValidationMessageFor(model => model.downloadURL)
@@ -133,7 +133,7 @@
                         <div>
                             <a id="input-title">置入title</a>&nbsp;&nbsp;&nbsp;
                             <a id="input-summary">置入summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="input-downloadURL">置入downloadURL</a>&nbsp;&nbsp;&nbsp;
+                            <a id="input-downloadURL">置入downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <script>

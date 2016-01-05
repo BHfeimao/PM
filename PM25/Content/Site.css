@@ -119,9 +119,10 @@ body {
     overflow:hidden;
     text-overflow:ellipsis;
 }
-.con-L li:hover{
+.con-L a:hover{
     color: #1a87ff;
 }
+
 a {
      text-decoration:none
 }

@@ -1,6 +1,7 @@
 ﻿using PM25.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -102,6 +103,19 @@ namespace PM25.Controllers
             ViewBag.i = 0;
             return View(vm);
         }
+
+        public ActionResult Down(string name)
+        {
+            //我要下載的檔案位置
+            string filepath = Server.MapPath("~/Temp/"+name );
+            //取得檔案名稱
+            string filename = System.IO.Path.GetFileName(filepath);
+            //讀成串流
+            Stream iStream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.Read);
+            //回傳出檔案
+            return File(iStream, "application/zip", filename);
+        }
+
         public ActionResult New()
         {
             ViewBag.i = 0;

@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.downloadURL)
+                <label for="downloadURL">downloadName</label>
                 <div class="col-md-10">
                     @Html.TextAreaFor(model => model.downloadURL)
                     @Html.ValidationMessageFor(model => model.downloadURL)
@@ -63,7 +63,7 @@
                         <div>
                             <a id="get-title">拉取title</a>&nbsp;&nbsp;&nbsp;
                             <a id="get-summary">拉取summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="get-downloadURL">拉取downloadURL</a>&nbsp;&nbsp;&nbsp;
+                            <a id="get-downloadURL">拉取downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                         <h1 style="font-size:28px">
                             文本编辑<br />
@@ -140,7 +140,7 @@
                         <div>
                             <a id="input-title">置入title</a>&nbsp;&nbsp;&nbsp;
                             <a id="input-summary">置入Summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="input-downloadURL">置入downloadURL</a>&nbsp;&nbsp;&nbsp;
+                            <a id="input-downloadURL">置入downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <script>

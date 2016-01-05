@@ -1,31 +1,47 @@
 ﻿@model IEnumerable<PM25.Models.Now>
-<title>前沿研究</title>
-<h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">前沿研究库</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>前沿研究</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">前沿研究库</h2>
 
-<p>
-    @Html.ActionLink("添加", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>操作</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <p>
+        @Html.ActionLink("添加", "Create")
+    </p>
+    <table class="table">
         <tr>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.title)
-            </td>
-            <td>
-                @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("查看", "Details", new { id = item.ID }) |
-                @Html.ActionLink("删除", "Delete", new { id = item.ID })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>操作</th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("查看", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("删除", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+@using (Html.BeginForm("Up", "Nows", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+    <input type="file" name="upfile" />
+                <br />
+                <br />
+                <input type="submit" name="upload" id="Submit" value="Upload" />
+}
+</body>
+</html>

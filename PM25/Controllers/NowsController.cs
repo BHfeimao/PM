@@ -7,13 +7,29 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PM25.Models;
+using System.IO;
 
 namespace PM25.Controllers
 {
     public class NowsController : Controller
     {
-        private DataDBContext db = new DataDBContext();
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Up(HttpPostedFileBase upfile)
+        {
+            //檢查是否有選擇檔案
+            if (upfile != null)
+            {
+                //檢查檔案大小要限制也可以在這裡做
+                if (upfile.ContentLength > 0)
+                {
+                    string savedName = Path.Combine(Server.MapPath("~/Temp/"), upfile.FileName);
+                    upfile.SaveAs(savedName);
+                }
+            }
+            return RedirectToAction("Index");
+        }
 
+        private DataDBContext db = new DataDBContext();
         // GET: Nows
         public ActionResult Index()
         {

@@ -33,9 +33,7 @@
                         
                         <li>
                            <h4> @MvcHtmlString.Create(n.title)</h4>
-                            <button>
-                                下载全文
-                            </button>                                               
+                                <a href="/Home/Down/?name=@MvcHtmlString.Create(n.downloadURL)">下载全文</a>                           
                             <p>
                             @MvcHtmlString.Create(n.summary)
                             </p>

@@ -340,6 +340,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\external\" />
+    <Folder Include="Temp\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
