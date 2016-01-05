@@ -14,8 +14,14 @@
                 </h1>
                 <ul>
                     @foreach (var n in Model.Pedias)
-                {
-                    <li><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a></li>
+                    {
+                        ViewBag.i++;
+                        if (ViewBag.i > 12)
+                        {
+                            break;
+                        }
+                    <li><nobr><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a>
+                        </nobr></li>
                 }
                 </ul>
             </div>

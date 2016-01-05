@@ -20,7 +20,7 @@ namespace PM25.Controllers
                 this.Pedias = PediaList;
             }
         }
-<<<<<<< HEAD
+
         public class NowModel
         {
             public List<Pedia> Pedias { get; set; }
@@ -31,7 +31,7 @@ namespace PM25.Controllers
                 this.Nows = NowList;
             }                  
         }
-=======
+
         public class BTModel
         {
             public List<Pedia> Pedias { get; set; }
@@ -62,9 +62,7 @@ namespace PM25.Controllers
                 this.News = NewList;
             }
         }
-
->>>>>>> origin/master
-        public ActionResult Index()
+      public ActionResult Index()
         {
             var vm = new IndexModel(db.Homes.ToList(), db.Pedias.ToList());
             vm.Homes = db.Homes.ToList();
@@ -72,17 +70,12 @@ namespace PM25.Controllers
             ViewBag.i = 0;      
             return View(vm);           
         }
-<<<<<<< HEAD
-        public ActionResult More()
-        {          
-            return View(db.Pedias);
-=======
 
         public ActionResult More()
         {
-            return View();
->>>>>>> origin/master
+            return View(db.Pedias);
         }
+       
         public ActionResult Bodytem()
         {
             ViewBag.i = 0;
@@ -106,6 +99,7 @@ namespace PM25.Controllers
             var vm = new NowModel(db.Pedias.ToList(), db.Nows.ToList());
             vm.Pedias = db.Pedias.ToList();
             vm.Nows = db.Nows.ToList();
+            ViewBag.i = 0;
             return View(vm);
         }
         public ActionResult New()
