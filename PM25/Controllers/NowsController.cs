@@ -24,15 +24,17 @@ namespace PM25.Controllers
                 {
                     string savedName = Path.Combine(Server.MapPath("~/Temp/"), upfile.FileName);
                     upfile.SaveAs(savedName);
+                    Session["name"] = upfile.FileName;
                 }
             }
-            return RedirectToAction("Index");
+            return Redirect(Request.UrlReferrer.ToString());
         }
 
         private DataDBContext db = new DataDBContext();
         // GET: Nows
         public ActionResult Index()
         {
+            Session["name"] = "";
             return View(db.Nows.ToList());
         }
 
@@ -54,6 +56,7 @@ namespace PM25.Controllers
         // GET: Nows/Create
         public ActionResult Create()
         {
+            ViewBag.name = Session["name"];
             return View();
         }
 
@@ -87,6 +90,7 @@ namespace PM25.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.name = Session["name"];
             return View(now);
         }
 

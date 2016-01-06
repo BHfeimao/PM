@@ -24,13 +24,22 @@
 <body style="margin:8px">
 
     <h2 style="background-color:#2a2828;color:white;margin:2px -8px">添加</h2>
+    <h4>Now</h4>
+    <hr />
+    @using (Html.BeginForm("Up", "Nows", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+        <input type="file" name="upfile" />
+        <br />
+                <br />
+                <input type="submit" name="upload" id="Submit" value="Upload" />
+    }
+    <h6 >本次上传：</h6>
+    <p id="upname" >@ViewBag.name</p>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Now</h4>
-            <hr />
             @Html.ValidationSummary(true)
             <div class="form-group">
                 @Html.LabelFor(model => model.title)
@@ -133,7 +142,6 @@
                         <div>
                             <a id="input-title">置入title</a>&nbsp;&nbsp;&nbsp;
                             <a id="input-summary">置入summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="input-downloadURL">置入downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <script>
@@ -145,10 +153,7 @@
                             $("#summary").val(editor.innerHTML);
                             editor.innerHTML = "";
                         })
-                        $("#input-downloadURL").click(function () {
-                            $("#downloadURL").val(editor.innerHTML);
-                            editor.innerHTML = "";
-                        })
+                        $("#downloadURL").val($("#upname").text());
                         $(function () {
                             function initToolbarBootstrapBindings() {
                                 var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',

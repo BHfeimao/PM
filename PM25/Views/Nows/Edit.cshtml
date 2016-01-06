@@ -23,14 +23,22 @@
 </head>
 <body style="margin:8px">
     <h2 style="background-color:#2a2828;color:white;margin:2px -8px">编辑</h2>
-
+    <h4>Now</h4>
+    <hr />
+    @using (Html.BeginForm("Up", "Nows", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+        <input type="file" name="upfile" />
+        <br />
+        <br />
+                <input type="submit" name="upload" id="Submit" value="Upload" />
+    }
+    <h6>新上传：</h6>
+    <p id="upname">@ViewBag.name</p><a id="updatafile">替换文件</a>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Now</h4>
-            <hr />
             @Html.ValidationSummary(true)
             @Html.HiddenFor(model => model.ID)
 
@@ -63,7 +71,6 @@
                         <div>
                             <a id="get-title">拉取title</a>&nbsp;&nbsp;&nbsp;
                             <a id="get-summary">拉取summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="get-downloadURL">拉取downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                         <h1 style="font-size:28px">
                             文本编辑<br />
@@ -140,10 +147,12 @@
                         <div>
                             <a id="input-title">置入title</a>&nbsp;&nbsp;&nbsp;
                             <a id="input-summary">置入Summary</a>&nbsp;&nbsp;&nbsp;
-                            <a id="input-downloadURL">置入downloadName</a>&nbsp;&nbsp;&nbsp;
                         </div>
                     </div>
                     <script>
+                        $("#updatafile").click(function () {
+                            $("#downloadURL").val($("#upname").text());
+                        })
                         $("#input-title").click(function () {
                             $("#title").val(editor.innerHTML);
                             editor.innerHTML = "";
@@ -152,18 +161,11 @@
                             $("#summary").val(editor.innerHTML);
                             editor.innerHTML = "";
                         })
-                        $("#input-downloadURL").click(function () {
-                            $("#downloadURL").val(editor.innerHTML);
-                            editor.innerHTML = "";
-                        })
                         $("#get-title").click(function () {
                             editor.innerHTML = $("#title").text();
                         })
                         $("#get-summary").click(function () {
                             editor.innerHTML = $("#summary").text();
-                        })
-                        $("#get-downloadURL").click(function () {
-                            editor.innerHTML = $("#downloadURL").text();
                         })
                         $(function () {
                             function initToolbarBootstrapBindings() {
