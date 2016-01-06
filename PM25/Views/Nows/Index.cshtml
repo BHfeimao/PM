@@ -1,11 +1,6 @@
 ﻿@model IEnumerable<PM25.Models.Now>
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <title>前沿研究</title>
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-</head>
-<body>
     <h2 style="background-color:#2a2828;color:white;font-size:31.5px;line-height:40px;margin:2px -8px">前沿研究库</h2>
 
     <p>
@@ -35,5 +30,4 @@
         }
     </table>
     <br />
-</body>
-</html>
+    @Html.ActionLink("返回索引页", "Index", "Data")

@@ -195,12 +195,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BodyTemsController.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomesController.cs" />
     <Compile Include="Controllers\InfrasController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoreController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\NowsController.cs" />
@@ -272,7 +271,6 @@
     <Content Include="Views\BodyTems\Details.cshtml" />
     <Content Include="Views\BodyTems\Edit.cshtml" />
     <Content Include="Views\BodyTems\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout0.cshtml" />
     <Content Include="Views\Home\Infrared.cshtml" />
     <Content Include="Views\Home\New.cshtml" />
     <Content Include="Views\Homes\Create.cshtml" />
@@ -295,6 +293,7 @@
     <Content Include="Views\Nows\Details.cshtml" />
     <Content Include="Views\Nows\Edit.cshtml" />
     <Content Include="Views\Nows\Index.cshtml" />
+    <Content Include="Views\Data\Index.cshtml" />
     <None Include="Views\Summary\DetailBT.cshtml" />
     <None Include="Views\Home\More.cshtml" />
     <Content Include="Web.config">
@@ -313,24 +312,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\BodyTem.cshtml" />
@@ -341,7 +322,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\external\" />
     <Folder Include="Temp\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
