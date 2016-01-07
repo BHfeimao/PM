@@ -4,6 +4,7 @@
 
 body {
     background-color: #ececee;
+    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 
 .header {
@@ -46,8 +47,9 @@ body {
     margin: 0 20px;
     float: left;
 }
-.header .navigation-bar li:hover{
+.header .navigation-bar a:hover{
     background-color:green;
+    color:red;
 }
 .render-body {
     margin : 10px 10%;
@@ -114,7 +116,6 @@ body {
     font-size: 12px;
     background: url('img/list-image.png')8px center no-repeat;
     padding: 1px 10px 0px 30px;
-    font-family: -webkit-pictograph;
     cursor:pointer;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -134,7 +135,6 @@ a {
     height: 500px;
     border: 1px solid #cdcaca;
     background-color: #f7f7f7;
-    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 
 

@@ -14,9 +14,7 @@
     border:2px solid #2a2828;
     float:left
 }
-.con-R li .R:hover{
-    border:2px solid #ff6a00;
-}
+
 .con-R li .img{
     background-color:black;
     width:120px;
