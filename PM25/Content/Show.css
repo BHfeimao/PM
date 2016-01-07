@@ -1,6 +1,5 @@
 ﻿.map-text-play{
-    border: 1px solid #d1d1d1;
-    
+    border: 1px solid #d1d1d1;  
     padding: 10px 20px;
     text-indent: 2em;
     background-color:#f7f7f7;
@@ -9,42 +8,25 @@
     padding-bottom: 20px;
 }
 
-.map-text-play header{
-    font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-    color: black;
-    font-size:25px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
 .map-text{
     
     font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     list-style-type: none;
     font-weight:normal ;
+    line-height:1.7em;
 }
 
-.map-text li h4{
-    font-weight:normal ;
+.map-text  h1 {
+    font-weight:bold ;
     color: black;
     font-size: 20px;
     margin: 10px 0;
 }
-
-.map-text li p{
-   
-    padding-bottom:10px;
-    line-height: 1.7em;
+.map-text img  {
+        max-width:800px;  
+        max-height:400px; 
+        display:table-cell;
+        margin: 0 auto; 
 }
 
-.map-text li .wumai{
-    height: 400px;
-    float: right;
-    margin: 20px 10px 0 20px;
-}
 
-.map-text li .heiyun{
-    height: 300px;
-    display: block;
-    margin: 20px auto;
-}

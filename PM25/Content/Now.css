@@ -1,70 +1,4 @@
-﻿.cyclopedia{
-    overflow: hidden;
-}
-
-.baidu-knowledge{
-    float: left;
-    width: 30%;
-    height:500px;
-    border: 1px solid #cbcaca;
-    background-color: #f7f7f7;
-}
-
-.baidu-knowledge h3{
-    margin: 5% 10%;
-}
-
-.baidu-knowledge h3 .lefts {
-    font-size:22px;
-    padding-bottom: 3px;
-    cursor:pointer;
-}
-
-.baidu-knowledge h3 .rights {
-    font-size:10px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 40%;
-    cursor:pointer;
-}
-
-.baidu-knowledge h3 .rights:hover{
-    color:  crimson;
-}
-
-.knowledge{
-    margin: 0 10% 10%    ;
-    height: 380px;
-    overflow: hidden;
-    border: 1px solid #cbcaca ;
-    padding-top: 30px;
-    padding-left: 5px;
-    list-style: none;
-}
-
-
-.knowledge li{
-    line-height: 30px;
-    font-size: 12px;
-    background: url('img/list-image.png')8px center no-repeat;
-    padding: 1px 10px 0px 30px;
-    font-family: -webkit-pictograph;
-    cursor:pointer;
-}
-
-ul.knowledge li:hover{
-    color: #1a87ff;
-}
-
-.text-introduction{
-    float: right;
-    width: 68%;
-    height: 500px;
-    border: 1px solid #cbcaca;
-    background-color: #f7f7f7;
-    overflow-y: scroll;
-}
-
-.text{
+﻿.text{
     list-style-type: none;
     overflow: hidden;
     padding-top:3%;
@@ -83,45 +17,19 @@ h4 {
     float: left;
 
 }
-.text li a {
-    
+
+.text li a {  
     overflow:hidden;
     margin-top:20px;
-    float:right;
-    
+    float:right;   
     }
 
+.text li a:hover {
+        color:#56d766;
+    }
 
-h4:hover{
-    color: #1a87ff;
-}
-
-.btn{
-    height:30px;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
-    margin-top:17px;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
-    border: 1px solid #ccc;
-    text-align:center;
-    vertical-align: middle;
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing: 1px;
-    background-color: #e6e6e6
-}
-
- .btn:hover{
-    background-color: #363636;
-    color: white;
-}
-
-.text p {
+.summary {
     clear:both;
     font-family: CustomFont,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     letter-spacing: 2px;
-    text-indent: 2em;
-
 }

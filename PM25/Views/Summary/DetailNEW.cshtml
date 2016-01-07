@@ -23,11 +23,13 @@
     </ul>
 </div>
 <div class="con-R">
-    @foreach (var item in Model.News)
-    {
-        if (item.ID == ViewBag.id)
+        <div class="detail">
+        @foreach (var item in Model.News)
         {
-            @MvcHtmlString.Create(item.detail)
+            if (item.ID == ViewBag.id)
+            {
+               @MvcHtmlString.Create(item.detail)
+            }
         }
-    }
+        </div>
 </div>

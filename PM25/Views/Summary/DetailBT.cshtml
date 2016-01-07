@@ -23,10 +23,12 @@
     </ul>
 </div>
 <div class="con-R">
+    <div class="detail">
     @foreach (var item in Model.BodyTems) {
         if (item.ID == ViewBag.id) {
             @MvcHtmlString.Create(item.detail)
         }
     }
+    </div>
 </div>
                 
