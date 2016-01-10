@@ -18,7 +18,7 @@
         {
             ViewBag.i++;
             if (ViewBag.i > 12) { break; }
-            <li><nobr><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a></nobr></li>
+            <li><nobr><a href="~/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a></nobr></li>
         }
     </ul>
 </div>
@@ -29,7 +29,7 @@
             <li>
                 <div class="R"><div class="img">@MvcHtmlString.Create(item.img)</div></div>
                 <p>
-                    @MvcHtmlString.Create(item.summary)<span><a href="/Summary/DetailIF/@item.ID">【全文】</a></span>
+                    @MvcHtmlString.Create(item.summary)<span><a href="~/Summary/DetailIF/@item.ID">【全文】</a></span>
                 </p>
             </li>
         }

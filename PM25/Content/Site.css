@@ -9,10 +9,7 @@ body {
 
 .header {
     padding: 0 10%;
-    background-image: url("img/back.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
+    background-color:rgb(128,128,128);
 }
 
 .header h1 {

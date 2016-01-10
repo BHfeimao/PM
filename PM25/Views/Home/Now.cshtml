@@ -1,6 +1,6 @@
 ﻿@model PM25.Controllers.HomeController.NowModel
 @{
-    ViewBag.Title = "Now";
+    ViewBag.Title = "前沿研究";
 }
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -20,7 +20,7 @@
                         {
                             break;
                         }
-                    <li><nobr><a href="/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a>
+                    <li><nobr><a href="~/More/Show/@n.ID">@MvcHtmlString.Create(n.title)</a>
                         </nobr></li>
                 }
                 </ul>
@@ -33,7 +33,7 @@
                         
                         <li>
                            <h4> @MvcHtmlString.Create(n.title)</h4>
-                                <a href="/Home/Down/?name=@MvcHtmlString.Create(n.downloadURL)">下载全文</a>                           
+                                <a href="~/Home/Down/?name=@MvcHtmlString.Create(n.downloadURL)">下载全文</a>                           
                             <div class="summary">
                             @MvcHtmlString.Create(n.summary)
                             </div>
