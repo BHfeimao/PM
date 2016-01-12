@@ -9,7 +9,8 @@ body {
 
 .header {
     padding: 0 10%;
-    background-color:rgb(128,128,128);
+    /*background-color:rgb(128,128,128);*/
+    background-image:url(/Content/Img/back.jpg);
 }
 
 .header h1 {

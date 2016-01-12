@@ -5,9 +5,10 @@
     overflow: hidden;
     float: left;
 }
-ul {
+.wraper ul {
     list-style: none;
     padding: 20px 50px;
+    border: 1px solid #d1d1d1;
 }
 .wraper ul li {
     height: 35px;
